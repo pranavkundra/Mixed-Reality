@@ -4,6 +4,8 @@ var renderer = Detector.webgl ? new THREE.WebGLRenderer() : new THREE.CanvasRend
 var width  = window.innerWidth,
 	height = window.innerHeight;
 	
+var cubeVisible=true
+
 renderer.setSize(width, height);
 
 var webglEl = document.getElementById('sphere');	
@@ -54,5 +56,18 @@ function onWindowResize() {
 
 }
 
+function cubeToggle() {
+	if(cubeVisible)
+	{
+		cubeVisible=false;
+		scene.remove(cube);
+	}
+
+	else
+	{
+		cubeVisible=true;
+		scene.add(cube);
+	}
+}
 
 window.addEventListener( 'resize', onWindowResize, false );
