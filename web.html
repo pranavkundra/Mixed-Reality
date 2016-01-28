@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Spherical panorama using threejs and webglrenderer-code by Colin Freeman, modified by Jay Bolter -->
+<head>
+	<title>Spherical panorama</title>
+	<style>
+		body { margin: 0; overflow: hidden; background-color: #000; }
+		.tm  { position: absolute; top: 10px; right: 10px; }
+    </style>	
+</head>
+<body>
+	<div id="sphere" ondblclick="doubleTap()">	
+	</div>	
+	<script src="./assets/jquery.js"></script>
+	<script src="./assets/three.js"></script>
+	<script src="./assets/OrbitControls.js"></script>	
+	<script src="./assets/Detector.js"></script>
+	<script src="./assets/CanvasRenderer.js"></script>
+	<script>
+  		var imageFile = "equiang.jpg";
+	</script>
+
+	<script src="./webapp.js"></script>
+		
+</body>
+</html>
