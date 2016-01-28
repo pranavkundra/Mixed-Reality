@@ -3,9 +3,9 @@ var renderer = Detector.webgl ? new THREE.WebGLRenderer() : new THREE.CanvasRend
 		
 var width  = window.innerWidth,
 	height = window.innerHeight;
-	
-var cubeVisible=true
 
+var cubeVisible=true
+	
 renderer.setSize(width, height);
 
 var webglEl = document.getElementById('sphere');	
@@ -45,6 +45,7 @@ render();
 function render() {
 	controls.update();
 	requestAnimationFrame(render);
+	cube.rotation.x +=.01;
 	renderer.render(scene, camera);
 }
 
@@ -69,5 +70,6 @@ function cubeToggle() {
 		scene.add(cube);
 	}
 }
+
 
 window.addEventListener( 'resize', onWindowResize, false );
